@@ -6,23 +6,24 @@
  */
 int _printf(const char *format, ...)
 {
-	int i;
+	unsigned int i = 0;
 	va_list p;
+	int x = 0;
 
 	if (format != NULL)
 	{
 		va_start(p, format);
-		while (i < strlen(format))
+		while (format[i] != '\0')
 		{
-			if (format[i] != 37)
-				_putchar(format[i]);
+			if (format[i] != '%')
+				x += _putchar(format[i]);
 			else
 			{
-				_get_function(format[i + 1])(p);
-				i++;
+				x += (*_get_function(format[i++]))(p);
 			}
 			i++;
 		}
-		_putchar("\n");
+		va_end(p);
 	}
+	return (x);
 }
