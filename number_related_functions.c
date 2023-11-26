@@ -57,19 +57,14 @@ int print_i(va_list p)
 	}
 
 	size = digits(n);
-	do
-	{
+	do {
 		q = malloc(sizeof(n) * size);
 	} while (q == NULL);
 	for (i = 0; i < size; i++)
 	{
 		q[size - 1 - i] = n % 10;
 		n = n / 10;
-	} /*
-	 if (size == 1 && sign == 0){
-		 _putchar('0');
-		 _putchar(q[0]);
-	 }*/
+	}
 	for (i = 0; i < size; i++)
 		_putchar('0' + q[i]);
 	free(q);
@@ -108,8 +103,7 @@ int print_d(va_list p)
 	}
 
 	size = digits(n);
-	do
-	{
+	do {
 		q = malloc(sizeof(n) * size);
 	} while (q == NULL);
 	for (i = 0; i < size; i++)
@@ -142,8 +136,7 @@ int print_unsigned(va_list p)
 		sign++;
 	}
 	size = digits(n);
-	do
-	{
+	do {
 		q = malloc(sizeof(n) * size);
 	} while (q == NULL);
 	for (i = 0; i < size; i++)
