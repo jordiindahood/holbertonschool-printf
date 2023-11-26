@@ -47,4 +47,7 @@ The unsigned int argument is converted to unsigned octal
               requires fewer digits, it is padded on the left with
               zeros.  The default precision is 1.  When 0 is printed
               with an explicit precision 0, the output is empty.
+
+## Flowchart 
+![Alt Text](firstflowchart.png)
               
