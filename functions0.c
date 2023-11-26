@@ -1,5 +1,5 @@
 #include "main.h"
-int number(long n);
+/*file specified for function related to printing*/
 int print_oct(va_list p)
 {
 	int n = va_arg(p, double);
