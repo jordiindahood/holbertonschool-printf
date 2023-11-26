@@ -10,23 +10,24 @@ int _printf(const char *format, ...)
 	va_list p;
 	int x = 0;
 
-	if (format != NULL)
+	if (format == NULL)
+		format = "";
+
+
+	va_start(p, format);
+	while (format[i] != '\0')
 	{
-		va_start(p, format);
-		while (format[i] != '\0')
+		if (format[i] != '%')
+			x += _putchar(format[i]);
+		else
 		{
-			if (format[i] != '%')
-				x += _putchar(format[i]);
+			if (_get_function(format[i++]) != NULL)
+				x += (*_get_function(format[i]))(p);
 			else
-			{
-				if (_get_function(format[i++])!= NULL)
-					x += (*_get_function(format[i]))(p);
-				else
-					x += nothing(format[i]);
-			}
-			i++;
+				x += nothing(format[i]);
 		}
-		va_end(p);
+		i++;
 	}
+	va_end(p);
 	return (x);
 }

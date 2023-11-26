@@ -16,7 +16,7 @@
  */
 typedef struct op
 {
-	char *op;					/*  {"c", print_c} 	T[0].(*f)===print_c		*/
+	char *op;
 	int (*f)(va_list);
 } op_t;
 

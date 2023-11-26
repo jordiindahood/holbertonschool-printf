@@ -1,12 +1,13 @@
 #include "main.h"
+#include <string.h>
 int digits(int n);
 int number(long n);
 int print_oct(va_list p)
 {
 	int n = va_arg(p, double);
 	int octalNum[10000];
-	int i,j = 0;
-	int x=0;
+	int i, j = 0;
+	int x = 0;
 
 	while (n != 0)
 	{
@@ -16,8 +17,8 @@ int print_oct(va_list p)
 	}
 
 	for (j = i - 1; j >= 0; j--)
-		 x+=_putchar('0' + octalNum[j]);
-	return(x);
+		x += _putchar('0' + octalNum[j]);
+	return (x);
 }
 /**
  * print_c - print character
@@ -35,9 +36,15 @@ int print_c(va_list p)
 int print_s(va_list p)
 {
 	char *str;
+	char *nil = "(null)";
 	int i, n = 0;
 
 	str = va_arg(p, char *);
+	if (str == NULL)
+	{
+		printf("done!!!");
+		str = nil;
+	}
 	while (str[i] != '\0')
 	{
 		n += _putchar(str[i]);
