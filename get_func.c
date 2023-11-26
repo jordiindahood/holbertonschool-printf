@@ -16,7 +16,7 @@ int (*_get_function(char s))(va_list)
 		{"o", print_oct},
 		{"%", print_pers}};
 
-	for (i = 0; i < 9; i++)
+	for (i = 0; i < 7; i++)
 		if (s == *(T[i].op))
 			return (T[i].f);
 
