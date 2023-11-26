@@ -10,21 +10,27 @@ int _printf(const char *format, ...)
 	va_list p;
 	int x = 0;
 
-	if (format == NULL) /*ERROR: if (format) is NULL*/
+	/*ERROR: if (format) is NULL*/
+	if (format == NULL)
 		return (-1);
 
 	va_start(p, format);
-	while (format[i] != '\0') /*iterating through the string (format)*/
+
+	/*iterating through the string (format)*/
+	while (format[i] != '\0')
 	{
-		if (format[i] == '%' && format[i + 1] == '\0') /*ERROR: if there is % without option*/
+		/*ERROR: if there is % without option*/
+		if (format[i] == '%' && format[i + 1] == '\0')
 			return (-1);
 
 		if (format[i] != '%')
 			x += _putchar(format[i]);
 		else
 		{
+			/*ERROR: */
 			if (format[i++] == '\0')
 				return (-1);
+			/*SUCCESS: if there is a non null character after %*/
 			else
 			{
 				if (_get_function(format[i]) != NULL)
