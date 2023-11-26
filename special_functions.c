@@ -1,6 +1,6 @@
 #include "main.h"
 #include <unistd.h>
-                /*THIS FILE CONTAIN FUNCTIONS THAT COPNTRIBUTED IN PRINTING*/
+/*THIS FILE CONTAIN FUNCTIONS THAT COPNTRIBUTED IN PRINTING*/
 /**
  * digits - count how many digits a number have
  * @n: long

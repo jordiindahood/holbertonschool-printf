@@ -128,7 +128,7 @@ int print_unsigned(va_list p)
 	int *q;
 	int sign = 0;
 
-	n = va_arg(p, unsigned);
+	n = va_arg(p, unsigned int);
 	if (n < 0)
 	{
 		_putchar('-');
