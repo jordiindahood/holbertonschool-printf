@@ -22,7 +22,7 @@ typedef struct op
 	int (*f)(va_list);
 } op_t;
 
-int digits(long n);
+int digits(long n)
 int _abs(int n);
 int nothing(char s);
 int _putchar(char c);
