@@ -116,7 +116,7 @@ int print_d(va_list p)
 	if (n < 0)
 	{
 		_putchar('-');
-		n = abs(n);
+		n = -n;
 		sign++;
 	}
 
@@ -129,6 +129,10 @@ int print_d(va_list p)
 	{
 		q[size - 1 - i] = n % 10;
 		n = n / 10;
+	}
+	if (size == 1){
+		_putchar('0');
+		_putchar(q[0]);
 	}
 	for (i = 0; i < size; i++)
 		_putchar('0' + q[i]);
