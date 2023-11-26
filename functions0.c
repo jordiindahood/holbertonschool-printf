@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 int number(long n);
 int print_oct(va_list p)
 {
@@ -98,18 +97,25 @@ int print_i(va_list p)
 int print_d(va_list p)
 {
 	int i, size;
-	long int n;
+	int n;
 	int *q;
 	int sign = 0;
 
-	n = va_arg(p,long int);
-	if (n == 0)
-		return (_putchar(n + '0'));
+	n = va_arg(p,int );
 
-	if ((int)n < 0)
+	if (n== INT_MIN){
+		_putchar('-');
+		n = INT_MAX;
+		sign++;
+	}
+
+	if (n == 0)
+		return (_putchar('0'));
+
+	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		n = abs(n);
 		sign++;
 	}
 
@@ -128,7 +134,7 @@ int print_d(va_list p)
 	free(q);
 	return (sign + size);
 }
-int digits(unsigned long n)
+int digits(long n)
 {
 	int i = n;
 
@@ -163,7 +169,7 @@ int print_unsigned(va_list p)
 	size = digits(n);
 	do
 	{
-		q = malloc(sizeof(int) * size);
+		q = malloc(sizeof(n) * size);
 	} while (q == NULL);
 	for (i = 0; i < size; i++)
 	{

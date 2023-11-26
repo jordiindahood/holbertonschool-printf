@@ -7,6 +7,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdarg.h>
+#include <math.h>
+#include <limits.h>
 
 /**
  * struct op - Struct op
@@ -20,7 +22,7 @@ typedef struct op
 	int (*f)(va_list);
 } op_t;
 
-int digits(unsigned long n);
+int digits(long n);
 int _abs(int n);
 int nothing(char s);
 int _putchar(char c);
