@@ -9,10 +9,6 @@ a project by hazem ouni and ahmed hemri.
 
 
 ## Description
-"_printf" is a function that produces an output according to format
-
-
-# Project Title
 
 A brief description of what this project does and who it's for
 
