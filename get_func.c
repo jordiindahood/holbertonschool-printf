@@ -8,18 +8,16 @@ int (*_get_function(char s))(va_list)
 {
 	int i;
 	op_t T[] = {
-		{'c', print_c},
-		{'s', print_s},
-		{'d', print_d},
-		{'i', print_i},
-		{'%', print_pers},
-		{'\0', NULL}};
-	i = 0;
-	while (s)
-	{
-		if (s == T[i].op)
-			break;
-		i++;
-	}
-	return (T[i].f);
+		{"c", print_c},
+		{"s", print_s},
+		{"d", print_d},
+		{"i", print_i},
+		{"u",print_unsigned},
+		{"%", print_pers},
+		{"o",print_oct}};
+
+	for (i=0;i < 7;i++)
+		if (s == *(T[i].op))
+			return (T[i].f);
+	return(NULL);
 }

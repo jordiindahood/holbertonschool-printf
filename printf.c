@@ -19,7 +19,10 @@ int _printf(const char *format, ...)
 				x += _putchar(format[i]);
 			else
 			{
-				x += (*_get_function(format[i++]))(p);
+				if (_get_function(format[i++])!= NULL)
+					x += (*_get_function(format[i]))(p);
+				else
+					x += nothing(format[i]);
 			}
 			i++;
 		}
