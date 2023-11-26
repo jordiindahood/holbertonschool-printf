@@ -1,7 +1,7 @@
 #ifndef PRINTF
 #define PRINTF
 
-#define UNUSED(x) (void)(x)					/*macro function similar to unused attribute*/
+#define UNUSED(x) (void)(x) /*macro function similar to unused attribute*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -27,7 +27,7 @@ int _abs(int n);
 int nothing(char s);
 int _putchar(char c);
 int _printf(const char *format, ...);
-
+int _pow_recursion(int x, int y);
 
 int (*_get_function(char s))(va_list);
 int print_c(va_list p);
@@ -37,5 +37,6 @@ int print_i(va_list p);
 int print_d(va_list p);
 int print_unsigned(va_list p);
 int print_oct(va_list p);
+int print_b(va_list p);
 
 #endif
