@@ -1,0 +1,42 @@
+.TH PRINTF 3 "2023" "PROJECT FOR HOLBERTON SCHOOL TUNISIA"
+
+.SH NAME
+printf \- formatted output conversion
+
+.SH SYNOPSIS
+.B #include "main.h"
+.PP
+.B int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+.PP
+The \fBprintf\fP function writes the formatted output to the standard output stream, according to the format specified by the \fIformat\fP string.
+
+.SH RETURN VALUE
+.PP
+Upon successful completion, the \fBprintf\fP function returns the number of characters written.
+
+.SH EXAMPLES
+.PP
+Print an integer:
+.EX
+.B #include <stdio.h>
+.B int main() {
+.B    int number = 69;
+.B    _printf("The answer is %d\n", number);
+.B    return 0;
+.B }
+.EE
+
+.SH SEE ALSO
+.TP
+man(1), printf(3)
+
+.SH AUTHOR
+Written by [hazemo ouni && ahmed hemri].
+
+.SH COPYRIGHT
+Copyright \(co 2023 [hazem ouni & ahmed hamri].
+
+.SH LICENSE
+yes it is FREEE
