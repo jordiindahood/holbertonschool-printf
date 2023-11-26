@@ -20,9 +20,13 @@ typedef struct op
 	int (*f)(va_list);
 } op_t;
 
+int digits(unsigned long n);
+int _abs(int n);
 int nothing(char s);
 int _putchar(char c);
 int _printf(const char *format, ...);
+
+
 int (*_get_function(char s))(va_list);
 int print_c(va_list p);
 int print_s(va_list p);
