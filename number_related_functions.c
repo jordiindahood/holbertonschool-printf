@@ -156,32 +156,3 @@ int print_unsigned(va_list p)
 	free(q);
 	return (sign + size);
 }
-/**
- * print_b - print number in binary
- * @p: va_list
- * Return: int
- */
-int print_b(va_list p)
-{
-	unsigned n;
-	int i = 0, res = 0;
-	int j = 1;
-
-	n = va_arg(p, unsigned);
-
-	if (n % 2 == 1)
-	{
-		n = n - 1;
-		i++;
-		res = 1;
-	}
-	while (n > 0)
-	{
-		if (n / 2 == 1)
-			res = res + j;
-		n = n - _pow_recursion(2, j);
-		i++;
-		j = j * 10;
-	}
-	return (i);
-}

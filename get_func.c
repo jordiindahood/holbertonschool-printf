@@ -14,8 +14,7 @@ int (*_get_function(char s))(va_list)
 		{"i", print_i},
 		{"u", print_unsigned},
 		{"o", print_oct},
-		{"%", print_pers},
-		{"b", print_b}};
+		{"%", print_pers}};
 
 	for (i = 0; i < 9; i++)
 		if (s == *(T[i].op))

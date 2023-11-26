@@ -37,6 +37,6 @@ int print_i(va_list p);
 int print_d(va_list p);
 int print_unsigned(va_list p);
 int print_oct(va_list p);
-int print_b(va_list p);
+
 
 #endif
