@@ -36,7 +36,7 @@ int _printf(const char *format, ...)
 				if (_get_function(format[i]) != NULL)
 					x += (*_get_function(format[i]))(p);
 				else
-					x+= nothing(format[i]);
+					x += nothing(format[i]);
 			}
 		}
 		i++;
