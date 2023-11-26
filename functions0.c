@@ -62,29 +62,44 @@ int print_pers(va_list p)
  */
 int print_i(va_list p)
 {
-	int i, n, size;
+	int i, size;
+	long n;
 	int *q;
 	int sign = 0;
 
-	n = va_arg(p, int);
+	n = va_arg(p,int );
+
+	if (n== INT_MIN){
+		_putchar('-');
+		n = INT_MAX;
+		sign++;
+		n++;
+	}
+
 	if (n == 0)
-		return (_putchar(n + '0'));
+		return (_putchar('0'));
+
 	if (n < 0)
 	{
 		_putchar('-');
 		n = -n;
 		sign++;
 	}
+
 	size = digits(n);
 	do
 	{
-		q = malloc(sizeof(int) * size);
+		q = malloc(sizeof(n) * size);
 	} while (q == NULL);
 	for (i = 0; i < size; i++)
 	{
 		q[size - 1 - i] = n % 10;
 		n = n / 10;
-	}
+	}/*
+	if (size == 1 && sign == 0){
+		_putchar('0');
+		_putchar(q[0]);
+	}*/
 	for (i = 0; i < size; i++)
 		_putchar('0' + q[i]);
 	free(q);
@@ -129,11 +144,11 @@ int print_d(va_list p)
 	{
 		q[size - 1 - i] = n % 10;
 		n = n / 10;
-	}
+	}/*
 	if (size == 1 && sign == 0){
 		_putchar('0');
 		_putchar(q[0]);
-	}
+	}*/
 	for (i = 0; i < size; i++)
 		_putchar('0' + q[i]);
 	free(q);
