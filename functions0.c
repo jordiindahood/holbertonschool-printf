@@ -97,7 +97,7 @@ int print_i(va_list p)
 int print_d(va_list p)
 {
 	int i, size;
-	int n;
+	long n;
 	int *q;
 	int sign = 0;
 
@@ -107,6 +107,7 @@ int print_d(va_list p)
 		_putchar('-');
 		n = INT_MAX;
 		sign++;
+		n++;
 	}
 
 	if (n == 0)
