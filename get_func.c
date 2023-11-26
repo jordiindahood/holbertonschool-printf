@@ -12,12 +12,13 @@ int (*_get_function(char s))(va_list)
 		{"s", print_s},
 		{"d", print_d},
 		{"i", print_i},
-		{"u",print_unsigned},
-		{"%", print_pers},
-		{"o",print_oct}};
+		{"u", print_unsigned},
+		{"o", print_oct},
+		{"%", print_pers}};
 
-	for (i=0;i < 7;i++)
+	for (i = 0; i < 7; i++)
 		if (s == *(T[i].op))
 			return (T[i].f);
-	return(NULL);
+
+	return (NULL);
 }

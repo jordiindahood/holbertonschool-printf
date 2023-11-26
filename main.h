@@ -1,7 +1,7 @@
 #ifndef PRINTF
 #define PRINTF
 
-#define UNUSED(x) (void)(x)
+#define UNUSED(x) (void)(x)					/*macro function similar to unused attribute*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,8 +11,8 @@
 /**
  * struct op - Struct op
  *
- * @op: The operator
- * @f: The function associated
+ * @op: The option char*
+ * @f: The function associated int (*)
  */
 typedef struct op
 {
