@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- * _printf - same as printf
- * @format: const char *
+ * _get_function - selecting a specific function and return it
+ * depending on the option
+ * @s: char
  * Return: int
  */
 int (*_get_function(char s))(va_list)
