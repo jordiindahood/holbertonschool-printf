@@ -36,20 +36,16 @@ int print_c(va_list p)
 int print_s(va_list p)
 {
 	char *str;
-	char *nil = "(null)";
 	int i, n = 0;
 
 	str = va_arg(p, char *);
+
 	if (str == NULL)
-	{
-		printf("done!!!");
-		str = nil;
-	}
-	while (str[i] != '\0')
-	{
+		str = "(null)";
+
+	for (i = 0; str[i] != '\0'; i++)
 		n += _putchar(str[i]);
-		i++;
-	}
+
 	return (n);
 }
 /**
