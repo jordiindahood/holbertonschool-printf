@@ -45,12 +45,13 @@ int print_s(va_list p)
  * print_r - print iin reverse
  * @p: va_list
  * Return: int
-*/
-int print_r(va_list p){
-	char * str =va_arg(p,char*);
+ */
+int print_r(va_list p)
+{
+	char *str = va_arg(p, char *);
 	if (str == NULL)
-		return(-1);
-	return(print_rev(str));
+		return (-1);
+	return (print_rev(str));
 }
 /**
  * print_rev - check the code
@@ -60,16 +61,17 @@ int print_r(va_list p){
  */
 int print_rev(char *s)
 {
-	int i, n, x =0;
+	int i, n, x = 0;
 
 	n = strlen(s);
 	if (*s != '\0')
 	{
 		i = 0;
-		do {
+		do
+		{
 			x += _putchar(*(s + n - i - 1));
 			i++;
 		} while (*(s + i) != '\0');
 	}
-	return(x);
+	return (x);
 }
