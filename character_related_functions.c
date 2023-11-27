@@ -53,25 +53,3 @@ int print_r(va_list p)
 		return (-1);
 	return (print_rev(str));
 }
-/**
- * print_rev - check the code
- * Description: print a string in reverse
- * @s: pointer to the string to be executed
- * Return: void
- */
-int print_rev(char *s)
-{
-	int i, n, x = 0;
-
-	n = strlen(s);
-	if (*s != '\0')
-	{
-		i = 0;
-		do
-		{
-			x += _putchar(*(s + n - i - 1));
-			i++;
-		} while (*(s + i) != '\0');
-	}
-	return (x);
-}
