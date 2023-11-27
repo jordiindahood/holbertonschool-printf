@@ -54,6 +54,8 @@ int print_rev(char *s)
 {
 	int i, n, x =0;
 
+	if (s == NULL)
+		return(-1);
 	n = strlen(s);
 	if (*s == '\0')
 		x = _putchar('\n');
