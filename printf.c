@@ -27,12 +27,13 @@ int _printf(const char *format, ...)
 			x += _putchar(format[i]);
 		else
 		{
-			/*ERROR: */
+			/*ERROR: "%\0" */
 			if (format[i++] == '\0')
 				return (-1);
 			/*SUCCESS: if there is a non null character after %*/
 			else
 			{
+				/*check if there is a function for the carachter after '%'*/
 				if (_get_function(format[i]) != NULL)
 					x += (*_get_function(format[i]))(p);
 				else
