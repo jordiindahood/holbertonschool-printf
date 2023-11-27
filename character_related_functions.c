@@ -50,7 +50,7 @@ int print_r(va_list p){
 	char * str =va_arg(p,char*);
 	if (str == NULL)
 		return(-1);
-	return(print_rev(*str));
+	return(print_rev(str));
 }
 /**
  * print_rev - check the code
@@ -63,9 +63,7 @@ int print_rev(char *s)
 	int i, n, x =0;
 
 	n = strlen(s);
-	if (*s == '\0')
-		x = _putchar('\n');
-	else
+	if (*s != '\0')
 	{
 		i = 0;
 		do {
