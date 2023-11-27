@@ -47,7 +47,10 @@ int print_s(va_list p)
  * Return: int
 */
 int print_r(va_list p){
-	return(print_rev(va_arg(p,char*)));
+	char * str =va_arg(p,char*);
+	if (str == NULL)
+		return(-1);
+	return(print_rev(*str));
 }
 /**
  * print_rev - check the code
@@ -59,8 +62,6 @@ int print_rev(char *s)
 {
 	int i, n, x =0;
 
-	if (s == NULL)
-		return(0);
 	n = strlen(s);
 	if (*s == '\0')
 		x = _putchar('\n');
