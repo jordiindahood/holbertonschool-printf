@@ -41,6 +41,11 @@ int print_s(va_list p)
 
 	return (n);
 }
+/**
+ * print_r - print iin reverse
+ * @p: va_list
+ * Return: int
+*/
 int print_r(va_list p){
 	return(print_rev(va_arg(p,char*)));
 }
@@ -55,7 +60,7 @@ int print_rev(char *s)
 	int i, n, x =0;
 
 	if (s == NULL)
-		return(-1);
+		*s = "";
 	n = strlen(s);
 	if (*s == '\0')
 		x = _putchar('\n');
