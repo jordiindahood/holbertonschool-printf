@@ -28,6 +28,7 @@ int nothing(char s);
 int _putchar(char c);
 int _printf(const char *format, ...);
 int _pow_recursion(int x, int y);
+int print_rev(char* s);
 
 int (*_get_function(char s))(va_list);
 int print_c(va_list p);
@@ -37,6 +38,6 @@ int print_i(va_list p);
 int print_d(va_list p);
 int print_unsigned(va_list p);
 int print_oct(va_list p);
-
+int print_r(va_list p);
 
 #endif

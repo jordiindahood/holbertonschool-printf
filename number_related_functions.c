@@ -123,18 +123,13 @@ int print_d(va_list p)
  */
 int print_unsigned(va_list p)
 {
-
-	int i, n, size;
+	int i, size;
+	unsigned int n;
 	int *q;
 	int sign = 0;
 
 	n = va_arg(p, unsigned int);
-	if (n < 0)
-	{
-		_putchar('-');
-		n = -1 * n;
-		sign++;
-	}
+
 	size = digits(n);
 	do {
 		q = malloc(sizeof(n) * size);

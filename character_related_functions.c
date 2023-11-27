@@ -41,3 +41,29 @@ int print_s(va_list p)
 
 	return (n);
 }
+int print_r(va_list p){
+	return(print_rev(va_arg(p,char*)));
+}
+/**
+ * print_rev - check the code
+ * Description: print a string in reverse
+ * @s: pointer to the string to be executed
+ * Return: void
+ */
+int print_rev(char *s)
+{
+	int i, n, x =0;
+
+	n = strlen(s);
+	if (*s == '\0')
+		x = _putchar('\n');
+	else
+	{
+		i = 0;
+		do {
+			x += _putchar(*(s + n - i - 1));
+			i++;
+		} while (*(s + i) != '\0');
+	}
+	return(x);
+}
