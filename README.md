@@ -1,6 +1,6 @@
 # HolbertonSchool-printf
 
- a project by hazem ouni and ahmed hemri.
+a project by hazem ouni and ahmed hemri.
 
 ## Authors
 
